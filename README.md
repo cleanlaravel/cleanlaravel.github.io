@@ -130,6 +130,40 @@ echo FOO_TITLE . ($first_number + $second_number);
 
 <br>
 
+# Убирайте мёртвый код
+
+Он плох так же, как и дублирующий код. Не нужно держать его в кодовой базе. Если что-то не вызывается, избавьтесь от этого! Если что, мёртвый код можно будет достать из истории версий.
+
+<!-- TODO Переписать -->
+
+**Плохо:**
+
+```php
+function oldRequestModule(string $url): void
+{
+    // ...
+}
+
+function newRequestModule(string $url): void
+{
+    // ...
+}
+
+$request = newRequestModule($requestUrl);
+inventoryTracker('apples', $request, 'www.inventory-awesome.io');
+```
+
+**Хорошо:**
+
+```php
+function requestModule(string $url): void
+{
+    // ...
+}
+
+$request = requestModule($requestUrl);
+inventoryTracker('apples', $request, 'www.inventory-awesome.io');
+```
 
 <br>
 
@@ -174,7 +208,17 @@ $user_profile;
 $user;
 ```
 
+## Не используйте слишком общие слова в названиях
 
+Часто можно встретить названия типа `UsersManager` или `UsersHandler`, которые предполагают что класс производит некоторые действия с сущностью `User`. Слова `Manager` или `Handler` не дают *никакой* дополнительной информации, не подсказывают что делает такой класс, за что конкретно отвечает.
+
+Старайтесь избегать в названиях классов и переменных слов:
+
+- `Manager`
+- `Handler`
+
+
+<!-- TODO Дополнить -->
 
 <br/>
 
@@ -239,7 +283,7 @@ $salary = $user->calculateSalary($base_salary = 345.0);
 
 <br/>
 
-# Избегайте глубокой вложенности
+## Избегайте глубокой вложености
 
 Слишком много `if/else` утверждений может сделать ваш код трудно понимаемым:
 
