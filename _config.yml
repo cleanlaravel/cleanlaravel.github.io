@@ -1,0 +1,47 @@
+title: LaraJournal
+description: A starter template for a Jeykll site using the Just the Docs theme!
+theme: just-the-docs
+
+url: https://larajournal.github.io/docs
+
+# Aux links for the upper right navigation
+aux_links:
+  "LaraJournal on GitHub": https://github.com/gomzyakov/larajournal
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: true
+
+# Color scheme supports "light" (default) and "dark"
+color_scheme: dark
+
+# Footer "Edit this page on GitHub" link text
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub."
+gh_edit_repository: "https://github.com/larajournal/docs" # the github URL for your repo
+gh_edit_branch: "main" # the branch that your docs is served from
+gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+
+# Google Analytics Tracking (optional)
+# Supports a CSV of tracking ID strings (eg. "UA-1234567-89,G-1AB234CDE5")
+#ga_tracking: UA-2709176-10
+#ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
+
+# External navigation links
+nav_external_links:
+  - title: LaraJournal on GitHub
+    url: https://github.com/gomzyakov/larajournal
+
+#collections:
+#  lang:
+#    permalink: "/lang/"
+#    output: true
+#  deploy:
+#    permalink: "/deploy/"
+#    output: true
+#
+#just_the_docs:
+#  collections:
+#    lang:
+#      name: Other languages
+#    deploy:
+#      name: Deploy LaraJournal
